@@ -1,0 +1,45 @@
+how to we read a line
+
+- how to read a line
+
+- how to cut the string before the + to extract the coefficient and the exponent
+- 	exponent after the ^ sign
+	coefficient before the x sign
+
+after extracting we need to add them as pairs in a new array
+================
+Extraction
+================
+initialize new array contains pairs of [[coefficient, exponent], [coefficient, exponent]]
+extracting coefficient =>
+	- we split the first part of the string
+	- anything before the X means its the coefficient
+	- if there is no X means there is no exponent and we save the coefficient with exponent 0
+	- if there is X we search for ^ sign
+	- if there is ^ sign we take the number after it
+	- if there is no ^ sign means the exponent is 1
+	- if there is then we take it
+	- if there is X only we search for ^ sign if its there we take exponent
+	else 
+		- if there is X Only means the coefficient 1 and we take exponent of 1 => irregular
+	- 
+
+result1 = [[coefficient, exponent]] ==> polynomial1
+result2 = [[coefficient, exponent]] ==> polynomial2
+resultAddition[] = new int();
+____________________________________________
+
+https://www.youtube.com/watch?v=ERheR_z24Bo
+
+================
+Addition
+================
+
+if(result1[0][1] == result2[0][1]){
+	resultAddition[0][0] = result1[0][0] + result2[0][0]
+	resultAddition[0][1] = result1[0][1]
+}
+else if (result1[0][1] != result2[0][1]){
+	resultAddition[0][0] = result2[0][0];
+	resultAddition[0][1] = result2[0][1];
+}
